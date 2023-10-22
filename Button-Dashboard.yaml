@@ -1,0 +1,235 @@
+- title: Office
+    path: office
+    icon: ''
+    subview: true
+    badges: []
+    cards:
+      - square: false
+        type: grid
+        cards:
+          - show_name: true
+            show_icon: true
+            type: button
+            tap_action:
+              action: toggle
+            entity: input_boolean.living_room_select
+            show_state: false
+            icon_height: 48px
+            icon: mdi:sofa
+            name: Livingroom
+          - show_name: true
+            show_icon: true
+            type: button
+            tap_action:
+              action: toggle
+            entity: input_boolean.master_bedroom_select
+            name: Master Bedroom
+            show_state: false
+            icon_height: 48px
+            icon: mdi:bed-king
+          - show_name: true
+            show_icon: true
+            type: button
+            tap_action:
+              action: toggle
+            entity: input_boolean.kitchen_select
+            show_state: false
+            icon_height: 48px
+            icon: mdi:fridge
+            name: Kitchen
+        columns: 3
+      - type: conditional
+        conditions:
+          - entity: input_boolean.living_room_select
+            state: 'on'
+        card:
+          type: tile
+          entity: light.living_room_lights
+          show_entity_picture: true
+          vertical: true
+          icon: mdi:remote-tv
+          name: Living Room Lights
+          tap_action:
+            action: toggle
+      - type: conditional
+        conditions:
+          - entity: input_boolean.living_room_select
+            state: 'on'
+        card:
+          square: false
+          type: grid
+          cards:
+            - type: tile
+              entity: light.couch_table_lamp
+              vertical: true
+              icon: mdi:lamp
+              name: Left
+            - type: tile
+              entity: light.fan_light_secondary
+              show_entity_picture: true
+              vertical: true
+              icon: mdi:ceiling-fan-light
+              name: Ceiling Fan Light
+              tap_action:
+                action: toggle
+            - type: tile
+              entity: light.3d_printer_lamp
+              vertical: true
+              icon: mdi:floor-lamp-torchiere
+              name: Right
+              tap_action:
+                action: toggle
+          columns: 3
+      - type: conditional
+        conditions:
+          - entity: input_boolean.living_room_select
+            state: 'on'
+        card:
+          square: false
+          type: grid
+          cards:
+            - type: tile
+              entity: light.living_room_lamps
+              show_entity_picture: true
+              vertical: true
+              icon: mdi:lamps
+              name: Lamps
+            - type: tile
+              entity: switch.3d_printer_lamp
+              show_entity_picture: true
+              vertical: true
+              icon: mdi:printer-3d
+              name: 3D Printer Lamp
+              tap_action:
+                action: toggle
+          columns: 2
+      - type: conditional
+        conditions:
+          - entity: input_boolean.master_bedroom_select
+            state: 'on'
+        card:
+          type: tile
+          entity: light.master_bedroom_lights
+          show_entity_picture: true
+          vertical: true
+          icon: mdi:bed-king
+          name: Master BedroomLights
+          tap_action:
+            action: toggle
+      - type: conditional
+        conditions:
+          - entity: input_boolean.master_bedroom_select
+            state: 'on'
+        card:
+          square: false
+          type: grid
+          cards:
+            - type: tile
+              entity: light.newone_dimmer_outlet
+              vertical: true
+              icon: mdi:lamp
+              name: M's Lamp
+            - type: tile
+              entity: fan.master_bedroom_fan
+              show_entity_picture: true
+              vertical: true
+              icon: mdi:ceiling-fan-light
+              name: Ceiling Fan Light
+              tap_action:
+                action: toggle
+            - type: tile
+              entity: light.master_bedroom_bedside_lamp
+              vertical: true
+              icon: mdi:floor-lamp-torchiere
+              tap_action:
+                action: toggle
+              name: P's Lamp
+          columns: 3
+      - type: conditional
+        conditions:
+          - entity: input_boolean.master_bedroom_select
+            state: 'on'
+        card:
+          square: false
+          type: grid
+          cards:
+            - type: tile
+              entity: light.master_bedside_lamps
+              show_entity_picture: true
+              vertical: true
+              icon: mdi:lamps
+              name: Bedside Lamps
+            - type: tile
+              entity: light.master_bedroom_dresser_lamps
+              show_entity_picture: true
+              vertical: true
+              icon: mdi:dresser
+              tap_action:
+                action: toggle
+              name: Dresser Lamps
+          columns: 2
+      - type: conditional
+        conditions:
+          - entity: input_boolean.kitchen_select
+            state: 'on'
+        card:
+          type: tile
+          entity: light.kichen_lights
+          show_entity_picture: true
+          vertical: true
+          icon: mdi:fridge
+          name: Kitchen Lights
+          tap_action:
+            action: toggle
+      - type: conditional
+        conditions:
+          - entity: input_boolean.kitchen_select
+            state: 'on'
+        card:
+          square: false
+          type: grid
+          cards:
+            - type: tile
+              entity: light.sink_light
+              vertical: true
+              icon: mdi:faucet-variant
+              name: Sink Light
+            - type: tile
+              entity: light.island_lights_primary
+              show_entity_picture: true
+              vertical: true
+              icon: mdi:light-recessed
+              name: Ceiling Fan Light
+              tap_action:
+                action: toggle
+            - type: tile
+              entity: light.kitchen_table_light_2
+              vertical: true
+              icon: mdi:table-chair
+              tap_action:
+                action: toggle
+              name: Dinner Table
+          columns: 3
+      - type: conditional
+        conditions:
+          - entity: input_boolean.kitchen_select
+            state: 'on'
+        card:
+          square: false
+          type: grid
+          cards:
+            - type: tile
+              entity: light.kitchen_island_lamps
+              show_entity_picture: true
+              vertical: true
+              icon: mdi:countertop
+              name: Island Lights
+            - type: tile
+              entity: light.kitchen_table_light_2
+              show_entity_picture: true
+              vertical: true
+              icon: mdi:food-turkey
+              tap_action:
+                action: toggle
+              name: Dinning Room Lights
+          columns: 2
