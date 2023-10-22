@@ -15,6 +15,6 @@ Master Bedroom Selected
 Kitchen Selected
 <img width="1428" alt="Buttons_Kitchen" src="https://github.com/ZehelSitchel/homeassistant_dashboard/assets/6528720/c0b7be11-ee5f-44a8-8888-8acf647a0466">
 
-First I had to make a boolean entity for each room.
+First I had to make a boolean entity for each room. I like to keep my configuration.yaml as clean as possible. So, I created a new document, input_boolean.yaml, and created the entities there. 
 
 Second I created a grid card with 3 columns for the three rooms. Each button is the boolean entity for the room. 
