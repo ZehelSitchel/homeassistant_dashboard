@@ -1,0 +1,55 @@
+# Custom Light Groups
+
+- platform: group
+  name: Living Room Lights
+  unique_id: living_room_lights
+  entities:
+    - light.3d_printer_lamp
+    - light.couch_table_lamp
+    - light.fan_light_secondary
+
+- platform: group
+  name: Living Room Lamps
+  unique_id: living_room_lamps
+  entities:
+    - light.3d_printer_lamp
+    - light.couch_table_lamp
+
+- platform: group
+  name: Master Bedroom Lights
+  unique_id: master_bedroom_lights
+  entities:
+    - light.master_bedroom_bedside_lamp
+    - light.newone_dimmer_outlet
+    - light.bedroom_lamp
+    - light.jellyfish_lamp
+    - light.master_bedroom_light
+
+- platform: group
+  name: Master Bedside Lamps
+  unique_id: master_bedside_lamps
+  entities:
+    - light.master_bedroom_bedside_lamp
+    - light.newone_dimmer_outlet
+
+- platform: group
+  name: Master Bedroom Dresser Lamps
+  unique_id: master_bedroom_dresser_lamps
+  entities:
+    - light.bedroom_lamp
+    - light.jellyfish_lamp
+
+- platform: group
+  name: Kitchen Lights
+  unique_id: kitchen_lights
+  entities:
+    - light.island_lights_primary
+    - light.sink_light
+    - light.kitchen_table_light_2
+
+- platform: group
+  name: Kitchen Island Lights
+  unique_id: kitchen_island_lights
+  entities:
+    - light.island_lights_primary
+    - light.sink_light
