@@ -1,0 +1,13 @@
+# Loads default set of integrations. Do not remove.
+default_config:
+
+# Links to files specific to custom entity type  
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+sensor: !include sensors.yaml
+binary_sensor: !include binary_sensors.yaml
+cover: !include covers.yaml
+mqtt: !include mqtt.yaml
+light: !include custom_lights.yaml
+input_boolean: !include input_boolean.yaml
