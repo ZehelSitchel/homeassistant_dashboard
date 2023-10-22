@@ -1,0 +1,15 @@
+#Make sure to add "input_boolean: !include input_boolean.yaml" (no quotes) to your configuration.yaml!
+living_room_select: 
+  name: Living Room Select
+
+kitchen_select:
+  name: Kitchen Select
+
+master_bedroom_select:
+  name: Master Bedroom Select
+
+pierces_office_select:
+  name: Pierce's Office Select
+
+meagans_office_select:
+  name:  Meagan's Office Select
